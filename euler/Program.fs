@@ -1,7 +1,19 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
+﻿open Euler001
+
+open System
+open System.Reflection
+
+let callFunction name = 
+    let asm = Assembly.GetExecutingAssembly()
+    for t in asm.GetTypes() do
+        for m in t.GetMethods() do
+            if m.IsStatic && m.Name = name then 
+                printfn "%A" (m.Invoke(null, [||]))
+    
+
 
 [<EntryPoint>]
 let main argv = 
-    printfn "%A" argv
-    0 // return an integer exit code
+    if Array.length argv > 0 then
+        callFunction argv.[0]
+    0
