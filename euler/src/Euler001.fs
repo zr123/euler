@@ -7,5 +7,3 @@ module Euler001
         [0..999]
         |> List.filter (fun c -> (c % 3 = 0) || (c % 5 = 0))
         |> List.sum
-
-    printfn "%d" (euler001 ())

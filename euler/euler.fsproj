@@ -56,6 +56,12 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="src\Euler001.fs" />
+    <Compile Include="src\Euler002.fs" />
+    <Compile Include="src\Euler003.fs" />
+    <Compile Include="src\Euler004.fs" />
+    <Compile Include="src\Euler005.fs" />
+    <Compile Include="src\Euler006.fs" />
+    <Compile Include="src\Euler007.fs" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />

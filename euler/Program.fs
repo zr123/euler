@@ -1,7 +1,13 @@
 ﻿open Euler001
-
+open Euler002
+open Euler003
+open Euler004
+open Euler005
+open Euler006
+open Euler007
 open System
 open System.Reflection
+
 
 let callFunction name = 
     let asm = Assembly.GetExecutingAssembly()
@@ -10,7 +16,7 @@ let callFunction name =
             if m.IsStatic && m.Name = name then 
                 printfn "%A" (m.Invoke(null, [||]))
     
-
+   
 
 [<EntryPoint>]
 let main argv = 
